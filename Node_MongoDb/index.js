@@ -7,14 +7,14 @@ mongoClient.connect(URL, config, function(error,mongodata){
         console.log('Connections Failed!');
     }else{
         console.log('Connection Success');
-        //insertData(mongodata);
-        //deleteData(mongodata)
-        //deleteAllData(mongodata);
-        //findOne(mongodata);
-        //findAll(mongodata);
-        //findProjection(mongodata);
-        //updateData(mongodata)
-        //createCustomCollection(mongodata);
+        insertData(mongodata);
+        deleteData(mongodata)
+        deleteAllData(mongodata);
+        findOne(mongodata);
+        findAll(mongodata);
+        findProjection(mongodata);
+        updateData(mongodata)
+        createCustomCollection(mongodata);
         deleteCollection(mongodata);
     }
 });
