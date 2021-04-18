@@ -1,3 +1,4 @@
+
 var mongoClient = require('mongodb').MongoClient;
 var URL         = "mongodb+srv://monga:mongaxyz@cluster0.fkiu2.mongodb.net/school?retryWrites=true&w=majority";
 var config      = { useUnifiedTopology: true } ;
