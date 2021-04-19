@@ -1,25 +1,16 @@
-const express = require('express');
-const app     = express();
+const express    = require('express');
+const app        = express();
+const userRoute  = require('./routes/users.route');
 
-// HTTP Methods using POSTMAN
-// GET, POST, PUT, DELETE
+app.use("/api/user/",userRoute);
+// Express Default Routes
 
 app.get('/', (req,res)=>{
     res.send('I am a GET request at HOME Route');
 })
 
-app.post('/', (req,res)=>{
-    res.send('I am a POST request at HOME Route');
+app.use((req, res)=>{
+    res.send("<h1>404: Sorry Invalid URL !</h1>");
 })
-
-app.put('/', (req,res)=>{
-    res.send('I am a PUT request at HOME Route');
-})
-
-app.delete('/', (req,res)=>{
-    res.send('I am a DELETE request at HOME Route');
-})
-
-
 
 module.exports = app;
